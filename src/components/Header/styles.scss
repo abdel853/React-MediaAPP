@@ -1,0 +1,78 @@
+@import '../../styles/varialbles.scss';
+
+header.main{
+     display:flex;
+     align-items: center;
+    justify-content: center;
+    //  border-bottom: solid 3pc $primary-color;
+     padding:5px;
+
+    svg{
+        font-size:50px;
+        color:$primary-color;
+        margin-right: 10px;
+
+        @include breakpoint-small{
+            font-size: 60px;
+          
+        }
+
+        @include breakpoint-large{
+            font-size: 70px;
+        }
+        // @media only screen and (min-width: 900px){
+    
+        // font-size:140px;
+        // }
+
+        @include breakpoint-small{
+            font-size: 36px;
+            color:red;
+        }
+                //this is one type
+        // @include breakpoint(600px){
+        //     font-size:140px;
+        // }
+
+        @include breakpoint(1200px){
+            font-size: 42px;
+            color:red;
+
+        }
+
+        // @media only screen and (min-width: 1200px){
+    
+        //     color:red;
+        //     }
+    }
+
+    div{
+        margin:0;
+        font-family: $title-font;
+        font-size:30px;
+        font-weight: normal;
+        color:$secondary-color;
+        @media only screen and (min-width: 900px){
+    
+            font-size:120px;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+// @media only screen and (min-width: 900px){
+//     header.main svg{
+//         font-size:140px;
+//     }
+
+//     header.main h1{
+//         font-size:120px;
+//     }
+// }

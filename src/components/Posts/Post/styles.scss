@@ -1,0 +1,180 @@
+
+@import './../../../styles/varialbles.scss';
+
+.post-component{
+    border: solid 1px $border-color;
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    @include breakpoint-small{
+        width:calc(50% - 2rem);
+        margin-right: 2rem;
+    }
+
+    @include breakpoint-large{
+        width: calc(33.33% - 2rem);
+    }
+
+    h3{
+        margin: 0 0 1rem 0;
+        font-family: $title-font;
+        font-size: 20px;
+        font-weight: normal;
+        color: $primary-color;
+    }
+
+    .description{
+        display: flex;
+        align-items: flex-start;
+
+        img{
+            max-width: 120px;
+            margin-right: 15px;
+        }
+
+        span{
+            color: $secondary-color;
+             line-height: 1.4rem;
+        }
+    }
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+    
+    div{
+        font-size: 0.8rem;
+        color:$gray-color;
+        margin: 1.5rem 1.5rem 0 0;
+        strong{
+             display: block;// display block makes the entertainment none and yes become block andgo to the buttom
+            color: $secondary-color;
+            font-size: 1rem;
+            }
+
+            &.promote-yes strong{// & for eleminate the space before div.promote-yes
+                    color: $success-color;
+            }
+
+            &.promote-no strong{
+                color: $danger-color;
+            }
+        }
+    }
+        .rate{
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+          
+       
+
+        button{
+            border:none;
+            font-size: 1rem;
+            color: $secondary-color;
+            display: flex;
+            align-items: center;
+            padding: 7px 15px;
+            cursor: pointer;
+
+            svg{
+                margin-right: 0.5rem;
+                font-size: 1.5rem;
+            }
+
+            &.like{
+                border-radius: 20px 0 0 20px;
+                border-right: solid 1px $border-color;
+                svg{
+                    color:$success-color;
+                }
+            }
+            
+        }
+
+        &.dislike{
+            border-radius: 0 20px 20px 0;
+}
+
+        svg{
+            color: $danger-color;
+        }
+
+    }
+
+    .rate-single-button{
+        button{
+            &.like{
+                border-right: none;
+                border-radius: 20px;
+            }
+
+            &.dislike{
+                border-radius: 20px;
+                
+            }
+        }
+    }
+
+    
+}
+
+
+//npm install react-icons --save
+// @import './../../../styles/varialbles.scss';
+// .post-component{
+// button{
+//     @include button-style(blue,10px){
+//         text-decoration: underline;
+//         text-transform: uppercase;
+//     };
+   
+// }
+/* all css no matter how many we have if we build we will have ony one css and one js
+although this is only for post but all button in other component would be red too
+*/
+/* 
+in order to make css specific to the component we have to add class to the component div */
+
+/* 
+.post-item .promote-yes{
+    background-color: green;
+    color: aliceblue;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.post-item .promote-no{
+    background-color: rgb(128, 0, 100);
+    color: aliceblue;
+    padding: 10px 20px;
+    display: inline-block;
+} */
+
+// .promote-no,
+// .promote-yes{
+//     color: aliceblue;
+//     padding: 10px 20px;
+//     display: inline-block;
+//     strong{
+//         color:yellow; // it applays only for strong inside promote yes no  not every strong
+//     }
+// }
+
+// .promote-yes{
+//     background-color: $primary;
+// }
+
+// .promote-no{
+//     background-color: rgb(128, 0, 100);
+// }
+
+//  .too-many-dislikes{
+//     color: fuchsia;
+//     font-weight: bold;
+
+// }
+// }
